@@ -1,0 +1,184 @@
+.Hackathon-Page {
+    width: 100%;
+    height: 1800px;
+}
+
+.Hackathon-Header {
+    width: 100%;
+    height: 382px;
+    background-color: rgba(0, 49, 69, 255);
+
+}
+
+.Display-Hackathon {
+
+    height: 200px;
+    display: flex;
+    align-items: center;
+}
+
+.Image-display1 {
+    margin-left: 200px;
+    width: 120px;
+    height: 110px;
+    border-radius: 15px;
+
+}
+
+.Hack-Name {
+    margin-left: 50px;
+    color: white;
+    font-size: 35px;
+}
+
+.All-btns {
+    display: flex;
+    flex-direction: column;
+}
+
+.Edit-btn {
+    width: 120px;
+    height: 35px;
+    margin-left: 800px;
+    font-size: 20px;
+    background-color: transparent;
+    border-radius: 15px;
+    border: solid white;
+    color: white;
+    cursor: pointer;
+}
+
+#Edit-icon {
+    margin-right: 10px;
+    color: white;
+}
+
+.Delete-btn {
+    margin-top: 30px;
+    width: 120px;
+    height: 35px;
+    margin-left: 800px;
+    font-size: 20px;
+    background-color: transparent;
+    border-radius: 15px;
+    border: solid white;
+    color: white;
+    cursor: pointer;
+}
+
+#Delete-icon {
+    margin-right: 10px;
+}
+
+.Summary-Hack {
+    color: white;
+    margin-left: 200px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.Star-Line {
+    display: flex;
+    flex-direction: row;
+}
+
+#Star {
+    margin-top: 25px;
+    margin-left: 200px;
+    color: white;
+    font-size: 20px;
+}
+
+.Line {
+    width: 0px;
+    margin-top: 23px;
+    margin-left: 25px;
+    height: 27px;
+    border: solid thin white;
+}
+
+.Calendar {
+    width: 100px;
+    height: 25px;
+    margin-left: 20px;
+    margin-top: 25px;
+    border: solid thin white;
+    border-radius: 10px;
+    color: white;
+    font-size: 18px;
+}
+
+#Calendar-icon {
+    margin-left: 10px;
+    font-size: 18px;
+    margin-right: 20px;
+}
+
+.Description-Hack {
+    display: flex;
+    flex-direction: row;
+}
+
+.Description-Title {
+    margin-top: 50px;
+    font-size: 25px;
+}
+
+.Description {
+    margin-left: 200px;
+    width: 50%;
+    font-size: 17px;
+}
+
+.Sub-Info {
+    margin-left: 300px;
+    margin-top: 40px;
+}
+
+.Name {
+    font-size: 22px;
+    color: gray;
+}
+
+.Name1 {
+    font-size: 20px;
+    width: 200px;
+    font-weight: 500;
+}
+
+.Duration {
+    display: flex;
+    flex-direction: row;
+}
+
+#Calendar-icon1 {
+    margin-top: 15px;
+    margin-left: 0px;
+    font-size: 24px;
+    margin-right: 10px;
+}
+
+.Date-Duration {
+    font-size: 17px;
+}
+
+.Link-btn {
+    display: flex;
+    flex-direction: column;
+}
+
+.Github-Link {
+    font-size: 18px;
+    width: 200px;
+    height: 40px;
+    border-radius: 10px;
+    border: solid thin gray;
+    background-color: transparent;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+#github {
+    margin-right: 10px;
+    font-size: 22px;
+}

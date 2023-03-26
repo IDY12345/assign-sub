@@ -1,56 +1,50 @@
-.Display-Component
-{
-    height: 400px;
+.Display-Component {
+    height: 800px;
     width: 100%;
+    background-color: rgb(219, 219, 219);
 }
 
-.Display-Header
-{
+.Display-Header {
     display: flex;
     width: 100%;
     height: 40px;
     align-items: center;
 }
 
-.Submissions-all
-{
+.Submissions-all {
     margin-left: 100px;
     font-size: 20px;
     width: 180px;
-    background-color: white;
+    background-color: transparent;
     border: none;
     cursor: pointer;
     transition-duration: 0.5s;
-    border-bottom:solid 4px rgba(68,146,76,255);
+    border-bottom: solid 4px rgba(68, 146, 76, 255);
 }
 
-.Submissions-fav
-{
+.Submissions-fav {
     margin-left: 30px;
     font-size: 20px;
     width: 230px;
     border: none;
-    background-color: white;
+    background-color: transparent;
     cursor: pointer;
 }
 
-.Submissions-all:active
-{
+.Submissions-all:active {
     border: none;
     border-bottom: none;
 }
 
 .Submissions-fav:active,
-.Submissions-fav:focus
-{
+.Submissions-fav:focus {
     transition-duration: 0.5s;
-    border-bottom:solid 4px rgba(68,146,76,255);
+    border-bottom: solid 4px rgba(68, 146, 76, 255);
 }
 
 
 
-.Search-div
-{
+.Search-div {
     position: relative;
     margin-left: 400px;
     width: 300px;
@@ -59,19 +53,19 @@
     height: 30px;
     border: solid thin #8e8e8e;
     border-radius: 10px;
+
 }
 
-.Search
-{
-    border:none;
+.Search {
+    border: none;
     width: 240px;
     height: 18px;
-    font-size:18px;
+    font-size: 18px;
     margin-left: 10px;
+    background-color: rgb(219, 219, 219);
 }
 
-#Search-icon
-{   
+#Search-icon {
     margin-top: 3px;
     margin-left: 15px;
     font-size: 25px;
@@ -80,17 +74,62 @@
 
 }
 
-.Search:focus
-{
+.Search:focus {
     outline: none;
 }
 
-.Select
-{
+.Select {
     margin-left: 30px;
     height: 30px;
     width: 100px;
     font-size: 20px;
     border-radius: 10px;
     color: #8e8e8e;
+    background-color: rgb(219, 219, 219);
+}
+
+.button-container {
+    margin-top: 100px;
+    margin-left: 100px;
+    width: 350px;
+    height: 300px;
+    background-color: white;
+    border-radius: 15px;
+    cursor: pointer;
+}
+
+/* .Container
+{
+    margin-top: 100px;
+    margin-left: 100px;
+    width: 300px;
+    height: 250px;
+    background-color: white;
+    border-radius: 15px;
+} */
+
+.Image-Display {
+    width: 150px;
+    height: 120px;
+    border-radius: 10px;
+    /* margin-top: 25px; */
+    margin-left: 25px;
+    border: solid thin black;
+}
+
+.Event-Display {
+    display: flex;
+    align-items: center;
+}
+
+.Event-Name {
+    margin-left: 25px;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.Summary {
+    font-size: 18px;
+    margin-top: 20px;
+    margin-left: 5px;
 }

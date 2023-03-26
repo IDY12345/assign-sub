@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './Display.css'
+import { Link } from 'react-router-dom'
 function Display() {
   const [click, setClick] = useState(true)
   const [click1, setClick1] = useState(false)
@@ -29,7 +30,18 @@ function Display() {
         </span>
       </div>
       <div className='Display-Panel'>
-        
+        <Link to="/Hackathon">
+          <button className='button-container'>
+            <div className='Container'>
+              <div className='Event-Display'>
+                <img src="assets\InterviewMe.png" alt="" className='Image-Display' />
+                <p className='Event-Name'>Event Name</p>
+              </div>
+
+              <div className='Summary'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur corrupti doloribus architecto, dolorum rerum ab?</div>
+            </div>
+          </button>
+        </Link>
       </div>
     </div>
   )

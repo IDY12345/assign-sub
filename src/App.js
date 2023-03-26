@@ -2,6 +2,7 @@ import { BrowserRouter as Router, Routes,  Route } from 'react-router-dom';
 import './App.css';
 import Home from './Pages/Home';
 import Form from './Pages/Form';
+import Hackathon from './Pages/Hackathon';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
 
             <Route path="/" element={<Home />} />
             <Route path='/Upload' element={<Form />} />
+            <Route path='/Hackathon' element={<Hackathon />} />
           </Routes>
         </nav>
       </Router>

@@ -9,7 +9,7 @@ function Home() {
             <div className='Logo-Header'>
                 <Link to="/"><img src="assets\AI Planet Logo.png" alt='' className='Logo' /></Link>
                 <div className='Upload-Header'>
-                <img src='assets\waves1.png' alt="" className='Waves' />
+                    <img src='assets\waves1.png' alt="" className='Waves' />
                     <h1 className='Hackathon-Submissions'>Hackathon Submissions</h1>
                     <p className='Intro'>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Impedit quam facilis itaque sapiente reiciendis, qui ipsam blanditiis soluta maiores corporis ipsum quidem quaerat! Corrupti, voluptates!
                     </p>
@@ -21,7 +21,7 @@ function Home() {
 
             </div>
             <div className='Display-Comp'>
-            <Display />
+                <Display />
             </div>
         </div>
 
