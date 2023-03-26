@@ -1,8 +1,13 @@
-import React from 'react'
+import React,{useState} from 'react'
 import './Form.css'
-
+import {collection, getFirestore} from 'firebase/firestore'
 import { Link } from 'react-router-dom'
+import { app } from '../firebase'
 function Form() {
+    const db=getFirestore(app)
+    const formRef=collection(db,"Submissions");
+    const [title, setTitle] = useState("")
+    const [summary, setSummary] = useState("")
     return (
         <div className='Form-Page'>
             <div className='Logo-Header'>

@@ -37,8 +37,8 @@ function Hackathon() {
                         <p className='Date-Duration'>24 Feb 2020 - 24 Feb 2023</p>
                     </div>
                     <div className='Link-btn'>
-                        <button className='Github-Link'><i class="fa-brands fa-github" id="github"></i>Github Repository</button>
-                        <button className='Github-Link'><i class="fa-solid fa-square-up-right" id='github'></i>Other Link</button>
+                        <button className='Github-Link1'><i class="fa-brands fa-github" id="github"></i>Github Repository</button>
+                        <button className='Github-Link1'><i class="fa-solid fa-square-up-right" id='github'></i>Other Link</button>
                     </div>
                 </div>
             </div>

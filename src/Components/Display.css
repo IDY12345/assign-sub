@@ -2,6 +2,7 @@
     height: 800px;
     width: 100%;
     background-color: rgb(219, 219, 219);
+    position: absolute;
 }
 
 .Display-Header {
