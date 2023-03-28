@@ -14,7 +14,7 @@ function App() {
 
             <Route path="/" element={<Home />} />
             <Route path='/Upload' element={<Form />} />
-            <Route path='/Hackathon' element={<Hackathon />} />
+            <Route path='/Hackathon/:id' element={<Hackathon />} />
           </Routes>
         </nav>
       </Router>

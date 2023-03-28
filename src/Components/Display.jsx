@@ -49,7 +49,7 @@ function Display() {
       <div className='Display-Panel'>
         {postList.map((post)=>{
           return(
-            <Link to="/Hackathon">
+            <Link to={`/Hackathon/${post.id}`}>
             <button className='button-container'>
               <div className='Container'>
                 <div className='Event-Display'>

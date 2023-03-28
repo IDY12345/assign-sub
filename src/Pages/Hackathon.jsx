@@ -1,28 +1,43 @@
-import React from 'react'
+import React,{useState,useEffect} from 'react'
 import './Hackathon.css'
-import { Link } from 'react-router-dom'
+import { Link, useParams } from 'react-router-dom'
+import { collection, getFirestore,getDocs, doc, getDoc } from 'firebase/firestore'
+import { app } from '../firebase'
 function Hackathon() {
+    const { id } = useParams()
+    const db=getFirestore(app);
+    const SubRef=doc(db,"Submissions","I5MZSMMf1ssm1rVbI4Rp")
+    const myDoc= getDoc(SubRef)
+    const [sub, setSub] = useState([])
+    console.log(myDoc.data)
+    useEffect(()=>
+    {
+    const getSubmissions=async()=>
+    {
+        const data = await getDocs(SubRef);
+        setSub(data.docs.map((doc) => ({ ...doc.data(), id})));
+    };
+    getSubmissions()
+})
     return (
         <div className='Hackathon-Page'>
-            <Link to="/">   <img src="assets\AI Planet Logo.png" alt='' className='Logo' /></Link>
+            <Link to="/"><img src="assets\AI Planet Logo.png" alt='' className='Logo' /></Link>
             <div className='Hackathon-Header'>
-                <div className='Display-Hackathon'>
-                    <img src='assets\InterviewMe.png' className='Image-display1' alt="" />
-                    <p className='Hack-Name'>InterviewMe</p>
-                    <div className='All-btns'>
-                        <button className='Edit-btn'><i class="fas fa-edit" id='Edit-icon'></i>Edit</button>
-                        <button className='Delete-btn'><i class="fa fa-trash" id="Delete-icon"></i>Delete</button>
-                    </div>
-                </div>
-                <p className='Summary-Hack'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore accusamus accusantium eligendi fugiat minus qui?</p>
-                <div className='Star-Line'>
-                    <i class="fa-regular fa-star" id="Star"></i>
-                    <div className='Line'></div>
-                    <div className='Calendar'>
-                        <i class="fa-regular fa-calendar" id="Calendar-icon"></i>
-                        Date
-                    </div>
-                </div>
+                    <><div className='Display-Hackathon'>
+                        <img src='assets\InterviewMe.png' className='Image-display1' alt="" />
+                        <p className='Hack-Name'>{myDoc.title}</p>
+                        <div className='All-btns'>
+                            <button className='Edit-btn'><i class="fas fa-edit" id='Edit-icon'></i>Edit</button>
+                            <button className='Delete-btn'><i class="fa fa-trash" id="Delete-icon"></i>Delete</button>
+                        </div>
+                    </div><p className='Summary-Hack'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore accusamus accusantium eligendi fugiat minus qui?</p><div className='Star-Line'>
+                            <i class="fa-regular fa-star" id="Star"></i>
+                            <div className='Line'></div>
+                            <div className='Calendar'>
+                                <i class="fa-regular fa-calendar" id="Calendar-icon"></i>
+                                Date
+                            </div>
+                        </div></>
             </div>
             <div className='Description-Hack'>
                 <div className='Description'>
