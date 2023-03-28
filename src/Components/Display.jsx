@@ -1,9 +1,26 @@
-import React, { useState } from 'react'
+import React, { useState,useEffect } from 'react'
 import './Display.css'
 import { Link } from 'react-router-dom'
+import { collection, getFirestore ,getDocs,doc,deleteDoc } from 'firebase/firestore'
+import { app } from '../firebase'
 function Display() {
+  const db=getFirestore(app);
+  const collectionRef=collection(db,"Submissions")
+  const [postList, setPostList] = useState([])
   const [click, setClick] = useState(true)
   const [click1, setClick1] = useState(false)
+  useEffect(() => {
+    const getPosts = async () => {
+      const data = await getDocs(collectionRef);
+      setPostList(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
+    };
+
+    getPosts();
+  })
+  const deletePost = async (id) => {
+    const postDoc = doc(db, "posts", id);
+    await deleteDoc(postDoc);
+  };
   const handleClick = () => {
     setClick(false)
     return
@@ -30,18 +47,23 @@ function Display() {
         </span>
       </div>
       <div className='Display-Panel'>
-        <Link to="/Hackathon">
-          <button className='button-container'>
-            <div className='Container'>
-              <div className='Event-Display'>
-                <img src="assets\InterviewMe.png" alt="" className='Image-Display' />
-                <p className='Event-Name'>Event Name</p>
+        {postList.map((post)=>{
+          return(
+            <Link to="/Hackathon">
+            <button className='button-container'>
+              <div className='Container'>
+                <div className='Event-Display'>
+                  <img src={post.image} alt="" className='Image-Display' />
+                  <p className='Event-Name'>{post.title}</p>
+                </div>
+                <div className='Summary'>{post.summary}</div>
               </div>
-
-              <div className='Summary'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur corrupti doloribus architecto, dolorum rerum ab?</div>
-            </div>
-          </button>
-        </Link>
+            </button>
+          </Link>
+          )
+        })}
+        
+        
       </div>
     </div>
   )
